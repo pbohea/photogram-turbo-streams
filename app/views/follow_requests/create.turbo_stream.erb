@@ -1,0 +1,6 @@
+<%= turbo_stream.before "#{dom_id(@follow_request)}_new_follow_request" do %>
+  <%= render @follow_request %>
+<% end %>
+
+
+<%= turbo_stream.replace_all ".#{dom_id(@follow_request.recipient)}" do %>
